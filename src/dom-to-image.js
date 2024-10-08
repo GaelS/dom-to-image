@@ -477,6 +477,8 @@
                 request.timeout = TIMEOUT;
                 request.open('GET', url, true);
                 request.send();
+                // Allow sending cookies with the request
+                request.withCredentials = true;
 
                 var placeholder;
                 if(domtoimage.impl.options.imagePlaceholder) {
